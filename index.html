@@ -1,29 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WikiBawang - Premium Anime Database</title>
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-    <!-- Memanggil CSS yang sudah dipisah -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg-[#0f172a] text-slate-200 min-h-screen selection:bg-blue-500/30 hero-gradient">
-    
-    <!-- Navigation -->
+<!-- Navigation -->
     <nav class="sticky top-0 z-50 glass border-b border-white/5 px-4 py-4">
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6">
             <div class="flex items-center justify-between w-full lg:w-auto gap-10">
-                <h1 class="text-3xl font-extrabold tracking-tighter cursor-pointer group" onclick="resetAndHome()">
+                <!-- Tambahkan WikiBawang. -->
+                <h1 class="text-3xl font-extrabold tracking-tighter cursor-pointer group" onclick="WikiBawang.resetAndHome()">
                     <span class="gradient-text">WIKI</span><span class="text-white group-hover:text-blue-400 transition-colors">BAWANG</span>
                 </h1>
                 <div class="flex items-center gap-6">
-                    <button onclick="showFavorites(true)" class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-pink-500 transition-all flex items-center gap-2">
+                    <!-- Tambahkan WikiBawang. -->
+                    <button onclick="WikiBawang.showFavorites(true)" class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-pink-500 transition-all flex items-center gap-2">
                         <span class="text-lg">❤️</span> Favorites
                     </button>
-                    <button onclick="fetchRandomAnime()" class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-yellow-400 transition-all flex items-center gap-2">
+                    <!-- Tambahkan WikiBawang. -->
+                    <button onclick="WikiBawang.fetchRandomAnime()" class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-yellow-400 transition-all flex items-center gap-2">
                         <span class="text-lg">🎲</span> Random
                     </button>
                 </div>
@@ -44,18 +33,9 @@
 
     <!-- Pagination -->
     <div id="pagination" class="max-w-7xl mx-auto p-10 flex justify-center items-center gap-6 hidden pb-24">
-        <button id="prevBtn" onclick="changePage(-1)" class="glass hover:bg-blue-600 px-8 py-3 rounded-2xl font-bold transition-all disabled:opacity-20 text-xs uppercase tracking-widest">Prev</button>
+        <!-- Tambahkan WikiBawang. -->
+        <button id="prevBtn" onclick="WikiBawang.changePage(-1)" class="glass hover:bg-blue-600 px-8 py-3 rounded-2xl font-bold transition-all disabled:opacity-20 text-xs uppercase tracking-widest">Prev</button>
         <span id="pageInfo" class="text-blue-400 font-extrabold text-sm tracking-widest bg-blue-500/5 px-6 py-3 rounded-2xl border border-blue-500/20">PAGE 1</span>
-        <button id="nextBtn" onclick="changePage(1)" class="glass hover:bg-blue-600 px-8 py-3 rounded-2xl font-bold transition-all text-xs uppercase tracking-widest">Next</button>
+        <!-- Tambahkan WikiBawang. -->
+        <button id="nextBtn" onclick="WikiBawang.changePage(1)" class="glass hover:bg-blue-600 px-8 py-3 rounded-2xl font-bold transition-all text-xs uppercase tracking-widest">Next</button>
     </div>
-
-    <footer class="border-t border-white/5 p-12 text-center">
-        <p class="text-slate-500 text-xs tracking-[0.3em] uppercase font-semibold">
-            &copy; 2026 WikiBawang • Designed by <span class="text-blue-500">Alex Sanjaya Saputro</span>
-        </p>
-    </footer>
-
-    <!-- Memanggil file JavaScript di bagian paling bawah -->
-    <script src="app.js"></script>
-</body>
-</html>
